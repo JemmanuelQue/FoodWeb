@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Adobo</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel ="icon" type="img/jpg" href="pic1\HEADER.png">
+		<link rel="stylesheet" type="text/css" href="css\styles.css">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/format.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+	</head>
+	<body background="pics-aboutus/fdish.jpg"></body>
+	<div class="navbar">
+        <div>
+            <img src="pic1\Abstract.png" alt="Logo" class="logo" >
+        </div>
+
+        <ul class="fonts">
+			<center>
+				<div class="search">
+				<form id="search" action="https://www.google.com/search" class="searchform" method="get" name="searchform" target="_blank">
+				<input name="sitesearch" type="hidden">
+					<input autocomplete="on" class="form-controlsearch" name="q" placeholder="Search" required="required"  type="text">
+				</form>
+				</center>
+			<li><a href="index.html">Home</a></li>
+            <li class="active"><a href="#filipino-dish">Filipino Dish</a></li>
+            <li><a href="easy.html">Easy to Cook Dish</a></li>
+			<li><a href="about-us.html">About us</a></li>
+        </ul>
+		
+        </div>
+    </div>
+
+    <div class="content">
+    <a href="dish.html"><img src="pics-aboutus/back.png" class="back"></a>
+       <h1>Adobo</h1>
+	   <br>
+	<center><img src="pic1/adobo.jpg" class="dish"></center>
+	<br>
+	<p class="description">
+	Adobo is the immersion of cooked food in a stock (or sauce) composed variously of paprika, oregano, salt, 
+	garlic, and vinegar to preserve and enhance its flavor. 
+	</p>
+
+
+	<div class="ingredients">
+	<h3>Ingredients:</h3>
+	
+	<ul>
+		<li>
+			20 grams vegetable oil</li>
+		<li>
+			1 tbsp garlic, crushed</li>
+		<li>35 grams onions, minced</li>
+		<li>1/2 kg pork belly, sliced</li>
+		<li>10 g (1 pc) Knorr Pork Cubes</li>
+		<li>100 ml water </li>
+		<li>25 ml vinegar</li>
+		<li>3 pcs laurel leaves</li>
+		<li>1 tsp brown sugar</li>
+		<li>2 grams whole black pepper</li>
+	</ul>
+	</div>
+
+	<div class="Instruc">
+	<h3>Instructions</h3>
+	
+	<ol>
+		<li>Combine the pork belly, soy sauce, and garlic then marinade for at least 1 hour</li>
+		<li>Heat the pot and put-in the marinated pork belly then cook for a few minutes</li>
+	    <li>Pour remaining marinade including garlic.</li>
+		<li>Add water, whole pepper corn, and dried bay leaves then bring to a boil. Simmer for 40 minutes to 1 hour</li>
+	    <li>Put-in the vinegar and simmer for 12 to 15 minutes</li>
+	    <li>Add salt to taste</li>
+	    <li>Serve hot. Share and enjoy!</li>
+	</ol>
+	</div>
+
+
+	<div class="facts">
+	<h3>Nutrition Facts:</h3>
+
+	<ul>
+		<li>Serving: 4g 
+			<li>Calories: 1211kcal (61%)</li> 
+			<li>Protein: 24g (48%)</li> 
+			<li>Fat: 120g (185%)</li>
+	</ul>
+
+	</div><br /><br />
+
+	<center><iframe width="560" height="315" src="https://www.youtube.com/embed/mtyULaM6RfQ?si=5ycJzjLUOkm8eTkx&amp;start=87" 
+	title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
+	web-share" allowfullscreen></iframe></center>
+
+	<center><br><a href="adobo-vegan.html">Vegan Option</a></br></center>
+
+	<br><br>
+	<center>
+
+		<body>
+			<div class="rating-css">
+				<div>Rate this recipe<br></div>
+				<div class="star-icon">
+					<input type="radio" name="rating1" id="rating1">
+					<label for="rating1" class="fa fa-star"> </label>
+					<input type="radio" name="rating1" id="rating2">
+					<label for="rating2" class="fa fa-star"></label> 
+					<input type="radio" name="rating1" id="rating3">
+					<label for="rating3" class="fa fa-star"></label>
+					<input type="radio" name="rating1" id="rating4">
+					<label for="rating4" class="fa fa-star"></label>
+					<input type="radio" name="rating1" id="rating5">
+					<label for="rating5" class="fa fa-star"></label>
+	</center>
+
+	<p class="white"><br>A total of 959 users review this with a 3 star reviews.</p>
+
+	<center>
+	<form id="commentForm">
+		<label for="name"></label>
+		
+		<label for="comment"><p class="white">Leave a comment:</p></label>
+		<textarea id="comment" name="comment" rows="4" cols="50" required></textarea><br><br>
+		
+		<input type="button" value="Submit Comment" onclick="submitComment()">
+	</form>
+	</center>
+
+	<!-- Comment container -->
+	<center>
+	<div id="commentContainer">
+	<p class="users">
+	Users suggestions and feedbacks:
+	</p>
+	</div>
+	</center>
+
+	<center>
+		<p><br><a href="dish.html">Go back to Recipes</a></p>
+	</center>
+	
+   </div>
+
+	<script>
+		var userCount = 0;
+
+			function submitComment() {
+				// Get the comment from the textarea
+				var comment = document.getElementById('comment').value;
+
+				// Clear the textarea after submitting
+				document.getElementById('comment').value = '';
+
+				// Increment the user count
+				userCount++;
+
+				// Create a new div for the comment
+				var newCommentDiv = document.createElement('div');
+				newCommentDiv.className = 'userComment';
+
+				// Set the text content of the div to include the user and comment
+				newCommentDiv.textContent = 'User ' + userCount + ': ' + comment;
+
+				// Append the comment div to the comment container
+				document.getElementById('commentContainer').appendChild(newCommentDiv);
+			}
+	</script>
+	</body>
+</html>

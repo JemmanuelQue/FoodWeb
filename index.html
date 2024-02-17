@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Home Page</title>
+		    <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel ="icon" type="img/jpg" href="pic1\HEADER.png">
+            <link rel="stylesheet" type="text/css" href="css\styles.css">
+            <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+	</head>
+<body background="pics-aboutus/123.jpg">
+	<div class="navbar">
+        <div>
+            <img src="pic1\Abstract.png" alt="Logo" class="logo" >
+        </div>
+            <ul class="fonts">
+                <center>
+                    <div class="search">
+                    <form id="search" action="https://www.google.com/search" class="searchform" method="get" name="searchform" target="_blank">
+                    <input name="sitesearch" type="hidden">
+                        <input autocomplete="on" class="form-controlsearch" name="q" placeholder="Search" required="required"  type="text">
+                    </form>
+                </center>
+                <li class="active"><a>Home</a></li>
+                <li><a href="dish.html">Filipino Dish</a></li>
+                <li><a href="easy.html">Easy to Cook Dish</a></li>
+                <li><a href="about-us.html">About us</a></li>
+            </ul>
+            
+        </div>
+    </div>
+        
+    <div class="content">
+        <h1>Food Web</h1>
+	
+            <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                 <img src="Slideshow/pic.webp"  style="width:100%" >
+             </div>
+
+                <div class="mySlides fade">
+                     <img src="Slideshow/pic (2).webp"  style="width:100%"  >
+                </div>
+
+                    <div class="mySlides fade">
+                        <img src="Slideshow/pic (3).webp"  style="width:100%" >
+                     </div>
+
+             <div class="mySlides fade">
+                <img src="Slideshow/pic (4).webp"  style="width:100%"  >
+             </div>
+
+        <div class="mySlides fade">
+            <img src="Slideshow/pic (5).webp"  style="width:100%" >
+        </div>
+
+    <div class="mySlides fade">
+        <img src="Slideshow/pic (6).webp"  style="width:100%">
+    </div>
+
+    </div><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+    </div>
+
+	    <br>
+	        <div class="explain">
+	
+                    <p class="description">FoodWeb is an ambitious online platform dedicated to satisfying the cravings and culinary aspirations of food 
+                    enthusiasts. This website aims to be a one-stop destination for anyone looking to explore, learn, and indulge in diverse cuisines from 
+                    around the world. It will provide a vast collection of delectable dishes, complete with detailed ingredient lists and step-by-step 
+                    cooking instructions.</p>
+
+            </div>
+                <br>
+            <div class="explain">
+                <p class="description">Want to get notified for future updates by FoodWeb? click <button id="textButton" onclick="showNotification()">Here.</button></p>
+            </div>
+
+<!-- Notification box element -->
+<div id="notification" class="notification"></div>
+
+<script>
+		// Function to show the notification
+    function showNotification() {
+        var notification = document.getElementById('notification');
+        notification.innerHTML = 'You will be notified for future updates!';
+        notification.style.display = 'block';
+
+        // Hide the notification after 3 seconds (adjust the timeout as needed)
+        setTimeout(function () {
+            notification.style.display = 'none';
+        }, 3000);
+    }
+		let slideIndex = 0;
+		showSlides();
+
+		function showSlides() {
+		let i;
+		let slides = document.getElementsByClassName("mySlides");
+		let dots = document.getElementsByClassName("dot");
+		for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";  
+		}
+		slideIndex++;
+		if (slideIndex > slides.length) {slideIndex = 1}    
+		for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		}
+		slides[slideIndex-1].style.display = "block";  
+		dots[slideIndex-1].className += " active";
+		setTimeout(showSlides, 3000); // Change image every 3 seconds
+		}
+</script>
+
+
+
+	</body>
+</html>
